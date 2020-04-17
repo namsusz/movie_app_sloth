@@ -10,7 +10,7 @@ function Movie({
   genres,
   summary,
   poster,
-  link
+  link,
 }) {
   return (
     <Link
@@ -23,8 +23,8 @@ function Movie({
           genres,
           summary,
           poster,
-          link
-        }
+          link,
+        },
       }}
     >
       <div className="movie">
@@ -36,11 +36,11 @@ function Movie({
           </div>
           <div className="movie__info">
             <p className="movie__comeout">
-              <span>개봉일</span>
+              <span className="span__comeout">개봉일</span>
               {comeout}
             </p>
             <ul className="movie__genres">
-              <span>장르</span>
+              <span className="span__genres">장르</span>
               {genres.map((genres, id) => (
                 <li key={id} className="genres__genre">
                   {genres}
@@ -64,7 +64,7 @@ Movie.prototype = {
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
 };
 
 export default Movie;
